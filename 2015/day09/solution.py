@@ -8,6 +8,7 @@ distances = defaultdict(dict)
 for i in data.splitlines():
     node, edge = i.split(" to ")
     dest, dist = edge.split(" = ")
+    # not a directed graph so if A -> B then B -> A
     distances[node].update({dest: int(dist)})
     distances[dest].update({node: int(dist)})
 
@@ -18,6 +19,7 @@ def get_distance(x):
     return distances[x[0]][x[1]]
 
 
+# brute-forcing all possible routes, assuming complete graph
 max = float("inf")
 for i in permutations(nodes):
     total = 0

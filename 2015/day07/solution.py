@@ -43,6 +43,7 @@ OPERATORS = {
     "RSHIFT": bit_rshift,
 }
 
+# searching for instructions of the form <left arg> <op> <right arg> -> <wire>
 PATTERN = re.compile(
     r"(?P<larg>\w*?)\s*(?P<op>AND|OR|LSHIFT|RSHIFT|NOT|)?\s*(?P<rarg>\w+)\s->\s(?P<wire>\w+)"  # noqa: E501
 )
