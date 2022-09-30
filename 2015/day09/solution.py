@@ -24,7 +24,7 @@ max = float("inf")
 for i in permutations(nodes):
     total = 0
     for j in range(len(i) - 1):
-        total += get_distance(i[j:j+2])
+        total += get_distance(i[j : j + 2])
     if total < max:
         max = total
 print(max)
@@ -33,7 +33,7 @@ min = float("-inf")
 for i in permutations(nodes):
     total = 0
     for j in range(len(i) - 1):
-        total += get_distance(i[j:j+2])
+        total += get_distance(i[j : j + 2])
     if total > min:
         min = total
 print(min)

@@ -1,5 +1,4 @@
 import re
-
 from collections import defaultdict
 
 instruction_pattern = r"(^\w+\s*\w*)\s(\d+,\d+)\sthrough\s(\d+,\d+)"
